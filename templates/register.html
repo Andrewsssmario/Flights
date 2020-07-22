@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+REGISTER!
+{% endblock %}
+
+{% block body %}
+<form action="/registrant"method="post">	
+    <select name="id">
+ 	     <option value="initial" selected disabled>--FLIGHTS--</option>
+	     {% for i in table %}
+		   <option value="{{i[0]}}">{{i[1]}}-{{i[2]}}</option>
+	     {% endfor %}
+    </select>
+    <input type="text" placeholder="Name" id="name" name="Name">
+    <input type="submit" value="Register!">
+<form>
+<script>
+	document.querySelector("form").onsubmit=function(){
+		if (document.querySelector("#name") && document.querySelector("select").value!="initial"){
+			return true;
+		}
+		else{
+			return false;
+		}
+	};
+</script>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}
+{{table[1]}}-{{table[2]}}
+{% endblock %}
+{% block body %}
+<h1 style="text-align:center">{{table[1]}}-{{table[2]}}</h1>
+<h2>Flight Information</h2>
+<h3>Name: {{table[1]}}-{{table[2]}}</h3>
+<h3>Flight Duration: {{table[3]}} Minutes</h3>
+<h2>Passengers</h2>
+
+{% for i in passengers%}
+	<h3>{{i[2]}}</h3>
+{% endfor %}
+<a href="/flights">Go Back</a>
+<a href="/">Go Back to the Home Page</a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Flight Select!
+{% endblock %}
+
+{% block body %}
+{% for i in table %}
+	<a href="/{{i[0]}}">{{i[1]}}-{{i[2]}}</a>
+	<br>
+{% endfor %}
+<br>
+<a href="/create">Create New Flight </a>
+<br>
+<a href="/delete">Delete a flight</a>
+{% endblock %}

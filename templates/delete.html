@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+DELETE A FLIGHT
+{% endblock %}
+
+{% block body %}
+<form action="/delete" method="post">
+	<select name="flight">
+		<option selected value="initial" disabled>--DELETE--</option>
+		{% for i in table %}
+			<option value={{i[0]}}>{{i[1]}}-{{i[2]}}</option>
+		{% endfor %}
+	</select>
+	<input type="submit" value="DELETE">
+
+</form>
+<br>
+<a href="/flights">Go back</a>
+
+{% endblock %}

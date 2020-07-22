@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}
+Create a New Flight!
+{% endblock %}
+{% block body %}
+<h1 style="text-align:center">CREATE A NEW FLIGHT</h1>
+<form action="/create" method="post">
+	<input type="text" name="origin" placeholder="origin">
+	<br>
+	<input type="text" name="destination" placeholder="destination">
+	<br>
+	<input type="text" name="duration" placeholder="time-In Minutes">
+	<br>
+	<input type="submit" value="MAKE A NEW FLIGHT"> 
+</form>
+<br>
+<a href="/flights">Go Back</a>
+{% endblock %}
